@@ -4,10 +4,11 @@ using System.Linq;
 
 namespace GradeBook.GradeBooks
 {
-    class RankedGradeBook : BaseGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
-        public RankedGradeBook(string name) : base(name)
+        public RankedGradeBook(string name, bool weighted) : base(name, weighted)
         {
+            IsWeighted = weighted;
             Type = GradeBookType.Ranked;
         }
         public override char GetLetterGrade(double averageGrade)

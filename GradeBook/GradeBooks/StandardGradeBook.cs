@@ -6,11 +6,12 @@ using System.Text;
 
 namespace GradeBook.GradeBooks
 {
-    class StandardGradeBook : BaseGradeBook
+    public class StandardGradeBook : BaseGradeBook
     {
-        public StandardGradeBook(string name) : base(name)
+        public StandardGradeBook(string name, bool weighted) : base(name, weighted)
         {
             Type = GradeBookType.Standard;
+            IsWeighted = weighted;
         }
     }
 }
